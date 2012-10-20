@@ -1,46 +1,74 @@
- ** Information
- jMatTcpJade
- https://github.com/robinroche/jMatTcpJade
- Robin Roche, 2011
- Establishes a TCP connection with a JADE agent in Java
- 
- ** Requirements
- - Matlab (tested with version R2009b)
- - A software to edit and compile java files (Eclipse, etc.)
- - JADE packages imported into the project: see http://jade.tilab.com/ to get the jar files
- I assume you are more or less familiar with how Matlab and JADE work.
- 
- ** Test instructions
- - Run java first, using the main function in LaunchJade.java.
- - Then run tcpTest.m
- This will establish a TCP connection between Matlab and Jade, which can then exhcnage data. 
- Both software can be in different location, just change the IP addresses and ports if needed.
- The code uses a sort of aknowledgment functionality, which checks if the message received is correct.
- Just change it to suit your needs.
- 
- When running the test, you should see in the java console:
- Agent started
- Server connection initiated
- Message sent to Matlab: 0
- Message received from Matlab: 0
- Message sent to Matlab: 1
- Message received from Matlab: 1
- etc.
+mat2jade
+By Robin Roche, University of Technology of Belfort-Montbéliard, France
 
- And in Matlab:
- Connection established
- Message from JADE:
- 0
- Message from JADE:
- 1
- Message from JADE:
- 2
- etc.
+
+CONCEPT
+
+This project is a basic interface between JADE agents and Matlab sugin TCP/IP. 
+
+
+REQUIREMENTS
+
+
+To use mat2jade, you need:
+- Matlab (tested with R2011b), with the Instrument Control Toolbox. This toolbox is only used for the TCP functions. If you find another way to use TCP communication with Matlab, you may not need this toolbox.
+- JADE (tested with 4.0) libraries. 
+
+
+SETUP
+
+I assume you already have Matlab installed.
+
+1. Get the mat2jade files.
+2. Import them to your favorite IDE, like Eclipse.
+3. Get JADE jar libraries (see link below).
+4. Include the libraries to the mat2jade project.
+6. Run the JADE program with the Launcher class.
+7. In Matlab, open the tcpTest.m file and run it.
+8. The communication should then be established and data should be exchanged. You should see things displaying in the console. If not, you have a problem somewhere.
+
+When running the test, you should see in the java console:
+Agent started
+Server connection initiated
+Message sent to Matlab: 0
+Message received from Matlab: 0
+Message sent to Matlab: 1
+Message received from Matlab: 1
+etc.
+
+And in Matlab:
+Connection established
+Message from JADE:
+0
+Message from JADE:
+1
+Message from JADE:
+2
+etc.
+
+
+FILES
+
+- In JADE:
+LauncheJade.java: A simple class that runs JADE and the test agent.
+TcpTestAgent.java: An agent that exchanges data with Matlab through TCP.
+
+- In Matlab:
+tcpTest.m: The main file for the Matlab side.
+tcp_send_function.m: A function that sends data through TCP.
+tcp_receive_function.m: A function that receives data through TCP. 
+
+
+USING mat2jade
+
+These file are free to use.
+I only ask you to cite one of my papers if you use it, especially for research: http://dx.doi.org/10.1109/DEXA.2012.9
+No extensive testing has been done, so use it at your own risk. 
+If you find bugs, errors, etc., or want to contribute, please let me know.
+
+
+LINKS
+
+JADE: http://jade.tilab.com
+Matlab: http://www.mathworks.com
  
- ** Limitations
- - Matlab can only act as a TCP server, so it needs to be run second.
- - Matlab does also only support a single TCP connection established at a time (as of today anyway). 
- So you cannot have two running TCP connections with Matlab.
- - I have run some tests with intensive communication with Matlab. 
- It works but I don't think it should be used if you need a fast response or if you need many messages exchanged quickly.
- Sometimes, for some unknown reasons, the messages are badly conditioned...
