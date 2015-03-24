@@ -1,4 +1,4 @@
-# mat2pws
+# mat2jade
 
 A basic interface between JADE agents and Matlab using TCP/IP. 
 
@@ -16,7 +16,7 @@ This interface was developed in collaboration with Colorado State University's [
 
 ![Interface between JADE, Matlab and PowerWorld Simulator](http://robinroche.com/webpage/images/Jadepw.png)
 
-mat2pws is only a portion of the whole interface, as it only concerns the interface between Matlab and JADE. See [mat2pws](https://github.com/robinroche/mat2pws) and [jade2pws](https://github.com/robinroche/jade2pws) for the other parts of the whole interface.
+mat2jade is only a portion of the whole interface, as it only concerns the interface between Matlab and JADE. See [mat2pws](https://github.com/robinroche/mat2pws) and [jade2pws](https://github.com/robinroche/jade2pws) for the other parts of the whole interface.
 
 ### Interface concept
 
