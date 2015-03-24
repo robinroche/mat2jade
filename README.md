@@ -16,11 +16,11 @@ This interface was developed in collaboration with Colorado State University's [
 
 ![Interface between JADE, Matlab and PowerWorld Simulator](http://robinroche.com/webpage/images/Jadepw.png)
 
-mat2pws is only a portion of the whole interface, as it only concerns the interface between Matlab and PowerWorld Simulator. See [mat2pws](https://github.com/robinroche/mat2pws) and [jade2pws](https://github.com/robinroche/jade2pws) for the other parts of the whole interface.
+mat2pws is only a portion of the whole interface, as it only concerns the interface between Matlab and JADE. See [mat2pws](https://github.com/robinroche/mat2pws) and [jade2pws](https://github.com/robinroche/jade2pws) for the other parts of the whole interface.
 
 ### Interface concept
 
-This script is a basic interface between Matlab and PowerWorld Simulator with SimAuto. It is based on the documentation of PowerWorld Simulator, and extends the examples provided. It can be easily tested and modified.
+This script is a basic interface between Matlab and JADE agents. It can be easily tested and modified.
 
 ### Code structure
 
@@ -82,9 +82,3 @@ etc.
 ### Contact
 
 Robin Roche - robinroche.com
-
-
-
-
-FILES
-
